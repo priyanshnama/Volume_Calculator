@@ -198,11 +198,12 @@
         android:id="@+id/reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="28dp"
         android:onClick="reset"
         android:text="Reset"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tableLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/rate_dis" />
 
     <Button
         android:id="@+id/calculate"
@@ -211,25 +212,98 @@
         android:onClick="calculate"
         android:text="Calculate"
         app:layout_constraintBottom_toBottomOf="@+id/reset"
-        app:layout_constraintStart_toEndOf="@+id/reset"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/reset" />
 
-    <TextView
-        android:id="@+id/answer"
-        android:layout_width="200dp"
+    <EditText
+        android:id="@+id/rate"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_column="0"
         android:layout_margin="1dp"
         android:layout_marginEnd="20dp"
         android:background="#FFFFFF"
         android:gravity="center"
-        android:text="Answer"
+        android:text="Rate"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/rate_dis"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/calculate"
+        app:layout_constraintTop_toTopOf="@+id/rate_dis" />
+
+    <TextView
+        android:id="@+id/volume"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_column="0"
+        android:layout_margin="1dp"
+        android:layout_marginEnd="20dp"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:text="Volume"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/calculate"
+        app:layout_constraintBottom_toBottomOf="@+id/volume_dis"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/calculate"
-        app:layout_constraintTop_toTopOf="@id/calculate"
+        app:layout_constraintStart_toEndOf="@+id/volume_dis"
+        app:layout_constraintTop_toTopOf="@+id/volume_dis" />
+
+    <TextView
+        android:id="@+id/rate_dis"
+        android:layout_width="0dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="12dp"
+        android:gravity="right|center_vertical"
+        android:text="Rate(rupees/cu.ft)"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/reset"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout2" />
+
+    <TextView
+        android:id="@+id/volume_dis"
+        android:layout_width="99dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="60dp"
+        android:gravity="right|center_vertical"
+        android:text="Volume"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reset" />
+
+    <TextView
+        android:id="@+id/amount_dis"
+        android:layout_width="98dp"
+        android:layout_height="41dp"
+        android:gravity="right|center_vertical"
+        android:text="Amount"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/volume_dis" />
+
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_column="0"
+        android:layout_margin="1dp"
+        android:layout_marginStart="68dp"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:text="Amount"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/amount_dis"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/amount_dis"
+        app:layout_constraintTop_toTopOf="@+id/amount_dis"
         app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
