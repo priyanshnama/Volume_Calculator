@@ -317,6 +317,7 @@
         app:layout_constraintTop_toTopOf="@+id/rate_dis" />
 
     <!--Banner AdMob ID : ca-app-pub-6242171661439587/3984601958 -->
+    <!--Banner AdMob Mock ID : ca-app-pub-3940256099942544/6300978111 -->
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
         android:layout_width="wrap_content"
@@ -324,7 +325,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         app:adSize="BANNER"
-        app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        app:adUnitId="ca-app-pub-6242171661439587/3984601958"
         app:layout_constraintBottom_toTopOf="@+id/reset"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.439"
