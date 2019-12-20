@@ -19,12 +19,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         MobileAds.initialize(this) {}
-
         mAdView = findViewById(R.id.adView)
         val adRequest = AdRequest.Builder().build()
-
         mAdView.loadAd(adRequest)
-
     }
 
     fun reset(view: View){
@@ -34,6 +31,7 @@ class MainActivity : AppCompatActivity() {
         hf.setText("")
         li.setText("")
         lf.setText("")
+        rate.setText("")
     }
 
     fun calculate(view: View){
