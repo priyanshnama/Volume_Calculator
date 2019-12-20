@@ -1,6 +1,6 @@
 package com.priyanshnama.volumecalculator
 
-import android.graphics.Typeface
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -20,8 +20,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         MobileAds.initialize(this) {}
         mAdView = findViewById(R.id.adView)
-        val adRequest = AdRequest.Builder().build()
-        mAdView.loadAd(adRequest)
+        val adRequest1 = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest1)
     }
 
     fun reset(view: View){
@@ -113,9 +113,7 @@ class MainActivity : AppCompatActivity() {
             val amt :Double
             amt = vol * val_rate
 
-            val tf = Typeface.createFromAsset(assets, "font/Rupee.ttf")
-            amount.setTypeface(tf)
-            amount.setText("`" + "$amt")
+            amount.text = "$amt rupees"
         }
         catch(ex:Exception){
 

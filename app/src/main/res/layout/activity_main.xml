@@ -11,11 +11,12 @@
         android:id="@+id/tableLayout2"
         android:layout_width="412dp"
         android:layout_height="159dp"
+        android:layout_marginTop="30dp"
         android:gravity="center"
         android:stretchColumns="0,1,2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/adView">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TableRow
             android:layout_width="wrap_content"
@@ -197,11 +198,11 @@
         android:id="@+id/reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="68dp"
         android:onClick="reset"
         android:text="Reset"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rate_dis" />
 
@@ -307,7 +308,9 @@
         android:layout_width="149dp"
         android:layout_height="38dp"
         android:ems="10"
+        android:hint="Rate"
         android:inputType="numberDecimal"
+        android:textAlignment="textEnd"
         app:layout_constraintBottom_toBottomOf="@+id/rate_dis"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline"
@@ -316,15 +319,18 @@
     <!--Banner AdMob ID : ca-app-pub-6242171661439587/3984601958 -->
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         app:adSize="BANNER"
         app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        app:layout_constraintBottom_toTopOf="@+id/reset"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.439"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></com.google.android.gms.ads.AdView>
+        app:layout_constraintTop_toBottomOf="@+id/rate_dis"
+        app:layout_constraintVertical_bias="0.611"></com.google.android.gms.ads.AdView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
