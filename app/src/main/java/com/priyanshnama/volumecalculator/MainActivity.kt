@@ -9,6 +9,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 import com.google.android.gms.ads.AdRequest
 
 import com.google.android.gms.ads.AdView
+import java.math.BigDecimal
+import java.math.RoundingMode
 
 
 class MainActivity : AppCompatActivity() {
@@ -99,7 +101,8 @@ class MainActivity : AppCompatActivity() {
             val vol: Double
             vol = v / 1728.00
 
-            volume.text = "$vol cu.ft"
+            val volume1 = BigDecimal(vol).setScale(2, RoundingMode.HALF_EVEN)
+            volume.text = "$volume1 cu.ft"
 
             val val_rate :Double
             val s_rate = rate.text.toString()
@@ -112,8 +115,8 @@ class MainActivity : AppCompatActivity() {
 
             val amt :Double
             amt = vol * val_rate
-
-            amount.text = "$amt rupees"
+            val amount1 = BigDecimal(amt).setScale(2, RoundingMode.HALF_EVEN)
+            amount.text = "$amount1 rupees"
         }
         catch(ex:Exception){
 
