@@ -3,13 +3,27 @@ package com.priyanshnama.volumecalculator
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.google.android.gms.ads.MobileAds
 import kotlinx.android.synthetic.main.activity_main.*
+import com.google.android.gms.ads.AdRequest
+
+import com.google.android.gms.ads.AdView
+
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var mAdView : AdView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        MobileAds.initialize(this) {}
+
+        mAdView = findViewById(R.id.adView)
+        val adRequest = AdRequest.Builder().build()
+
+        mAdView.loadAd(adRequest)
+
     }
 
     fun reset(view: View){
@@ -86,7 +100,23 @@ class MainActivity : AppCompatActivity() {
             val vol: Double
             vol = v / 1728.00
 
-            answer.text = "$vol cu.ft"
+            volume.text = "$vol cu.ft"
+
+            val val_rate :Double
+            val s_rate = rate.text.toString()
+            if(s_hf.matches("-?\\d+(\\.\\d+)?".toRegex())){
+                val_rate = s_rate.toDouble()
+            }
+            else{
+                val_rate = 0.00
+            }
+
+            val amt :Double
+            amt = vol * val_rate
+
+            val tf = Typeface.createFromAsset(assets, "font/Rupee.ttf")
+            amount.setTypeface(tf)
+            amount.setText("`" + "$amt")
         }
         catch(ex:Exception){
 

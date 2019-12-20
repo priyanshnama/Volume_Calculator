@@ -11,12 +11,11 @@
         android:id="@+id/tableLayout2"
         android:layout_width="412dp"
         android:layout_height="159dp"
-        android:layout_marginTop="80dp"
         android:gravity="center"
         android:stretchColumns="0,1,2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/adView">
 
         <TableRow
             android:layout_width="wrap_content"
@@ -198,10 +197,11 @@
         android:id="@+id/reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="88dp"
         android:onClick="reset"
         android:text="Reset"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rate_dis" />
 
@@ -213,23 +213,9 @@
         android:text="Calculate"
         app:layout_constraintBottom_toBottomOf="@+id/reset"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/reset" />
-
-    <EditText
-        android:id="@+id/rate"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_column="0"
-        android:layout_margin="1dp"
-        android:layout_marginEnd="20dp"
-        android:background="#FFFFFF"
-        android:gravity="center"
-        android:text="Rate"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toBottomOf="@+id/rate_dis"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/calculate"
-        app:layout_constraintTop_toTopOf="@+id/rate_dis" />
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/reset"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/volume"
@@ -250,34 +236,37 @@
 
     <TextView
         android:id="@+id/rate_dis"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="39dp"
         android:layout_marginTop="12dp"
         android:gravity="right|center_vertical"
         android:text="Rate(rupees/cu.ft)"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintEnd_toEndOf="@+id/reset"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tableLayout2" />
 
     <TextView
         android:id="@+id/volume_dis"
-        android:layout_width="99dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="60dp"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="36dp"
         android:gravity="right|center_vertical"
         android:text="Volume"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/reset" />
 
     <TextView
         android:id="@+id/amount_dis"
-        android:layout_width="98dp"
+        android:layout_width="0dp"
         android:layout_height="41dp"
         android:gravity="right|center_vertical"
         android:text="Amount"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/volume_dis"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/volume_dis" />
 
@@ -305,5 +294,36 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <EditText
+        android:id="@+id/rate"
+        android:layout_width="149dp"
+        android:layout_height="38dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/rate_dis"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/rate_dis" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-6242171661439587/8192382224"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></com.google.android.gms.ads.AdView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
