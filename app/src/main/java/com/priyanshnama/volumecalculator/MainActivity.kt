@@ -101,7 +101,7 @@ class MainActivity : AppCompatActivity() {
             val vol: Double
             vol = v / 1728.00
 
-            val volume1 = BigDecimal(vol).setScale(2, RoundingMode.HALF_EVEN)
+            val volume1 = BigDecimal(vol).setScale(6, RoundingMode.HALF_EVEN)
             volume.text = "$volume1 cu.ft"
 
             val val_rate :Double
