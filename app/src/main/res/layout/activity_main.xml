@@ -23,8 +23,6 @@
             android:layout_height="wrap_content"
             android:layout_margin="0dp"
             android:layout_weight="0"
-            android:background="#FFFFFF"
-
             >
 
 
@@ -33,7 +31,6 @@
                 android:layout_height="wrap_content"
                 android:layout_column="0"
                 android:layout_margin="1dp"
-                android:background="#FFFFFF"
                 android:gravity="start|fill"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -42,7 +39,6 @@
                 android:layout_height="wrap_content"
                 android:layout_column="0"
                 android:layout_margin="1dp"
-                android:background="#FFFFFF"
                 android:gravity="center"
                 android:text="@string/feet"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
@@ -52,7 +48,6 @@
                 android:layout_height="wrap_content"
                 android:layout_column="0"
                 android:layout_margin="1dp"
-                android:background="#FFFFFF"
                 android:gravity="center"
                 android:text="@string/inches"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
@@ -64,18 +59,15 @@
             android:layout_height="wrap_content"
             android:layout_margin="0dp"
             android:layout_weight="0"
-            android:background="#FFFFFF"
-
             >
 
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_column="0"
                 android:layout_margin="1dp"
-                android:background="#FFFFFF"
-                android:gravity="end"
+                android:gravity="center_vertical|end"
                 android:text="@string/height"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -87,7 +79,6 @@
                 android:layout_margin="1dp"
                 android:autofillHints="0"
                 android:labelFor="@id/hf"
-                android:background="#FFFFFF"
                 android:gravity="center"
                 android:inputType="number"
                 android:textAppearance="?android:attr/textAppearanceLarge"
@@ -101,7 +92,6 @@
                 android:layout_margin="1dp"
                 android:autofillHints=""
                 android:labelFor="@id/hi"
-                android:background="#FFFFFF"
                 android:gravity="center"
                 android:inputType="number"
                 android:textAppearance="?android:attr/textAppearanceLarge"
@@ -113,15 +103,14 @@
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:layout_weight="0"
-            android:background="#FFFFFF">
+            >
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_column="0"
                 android:layout_margin="1dp"
-                android:background="#FFFFFF"
-                android:gravity="end"
+                android:gravity="center_vertical|end"
                 android:text="@string/length"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -132,7 +121,6 @@
                 android:layout_column="1"
                 android:layout_margin="1dp"
                 android:labelFor="@id/lf"
-                android:background="#FFFFFF"
                 android:gravity="center"
                 android:inputType="number"
                 android:textAppearance="?android:attr/textAppearanceLarge"
@@ -145,7 +133,6 @@
                 android:layout_height="wrap_content"
                 android:layout_column="1"
                 android:layout_margin="1dp"
-                android:background="#FFFFFF"
                 android:labelFor="@id/li"
                 android:gravity="center"
                 android:inputType="number"
@@ -160,15 +147,14 @@
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:layout_weight="0"
-            android:background="#FFFFFF">
+            >
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_column="0"
                 android:layout_margin="1dp"
-                android:background="#FFFFFF"
-                android:gravity="end"
+                android:gravity="center_vertical|end"
                 android:text="@string/breadth"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -178,7 +164,6 @@
                 android:layout_height="wrap_content"
                 android:layout_column="1"
                 android:layout_margin="1dp"
-                android:background="#FFFFFF"
                 android:labelFor="@id/bf"
                 android:gravity="center"
                 android:inputType="number"
@@ -192,7 +177,6 @@
                 android:layout_height="wrap_content"
                 android:layout_column="1"
                 android:layout_margin="1dp"
-                android:background="#FFFFFF"
                 android:gravity="center"
                 android:labelFor="@id/bi"
                 android:inputType="number"
@@ -235,7 +219,6 @@
         android:layout_column="0"
         android:layout_margin="1dp"
         android:layout_marginEnd="20dp"
-        android:background="#FFFFFF"
         android:gravity="center"
         android:text="@string/volume"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -288,8 +271,8 @@
         android:layout_column="0"
         android:layout_margin="1dp"
         android:layout_marginStart="68dp"
-        android:background="#FFFFFF"
         android:gravity="center"
+
         android:text="@string/amount"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textStyle="bold"
@@ -351,7 +334,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/night_mode"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
