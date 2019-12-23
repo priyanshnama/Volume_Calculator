@@ -44,7 +44,7 @@
                 android:layout_margin="1dp"
                 android:background="#FFFFFF"
                 android:gravity="center"
-                android:text="ft"
+                android:text="@string/feet"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
             <TextView
@@ -54,7 +54,7 @@
                 android:layout_margin="1dp"
                 android:background="#FFFFFF"
                 android:gravity="center"
-                android:text="in"
+                android:text="@string/inches"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
         </TableRow>
@@ -74,9 +74,9 @@
                 android:layout_height="match_parent"
                 android:layout_column="0"
                 android:layout_margin="1dp"
+                android:layout_gravity="end"
                 android:background="#FFFFFF"
-                android:gravity="right"
-                android:text="Height"
+                android:text="@string/height"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
             <EditText
@@ -86,6 +86,7 @@
                 android:layout_column="0"
                 android:layout_margin="1dp"
                 android:autofillHints="0"
+                android:labelFor="@id/hf"
                 android:background="#FFFFFF"
                 android:gravity="center"
                 android:inputType="number"
@@ -99,6 +100,7 @@
                 android:layout_column="1"
                 android:layout_margin="1dp"
                 android:autofillHints=""
+                android:labelFor="@id/hi"
                 android:background="#FFFFFF"
                 android:gravity="center"
                 android:inputType="number"
@@ -119,8 +121,8 @@
                 android:layout_column="0"
                 android:layout_margin="1dp"
                 android:background="#FFFFFF"
-                android:gravity="right"
-                android:text="Length"
+                android:layout_gravity="end"
+                android:text="@string/length"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
             <EditText
@@ -130,10 +132,12 @@
                 android:layout_column="1"
                 android:layout_margin="1dp"
                 android:background="#FFFFFF"
+                android:labelFor="@id/lf"
                 android:gravity="center"
                 android:inputType="number"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:importantForAutofill="no" />
 
             <EditText
                 android:id="@+id/li"
@@ -142,10 +146,12 @@
                 android:layout_column="1"
                 android:layout_margin="1dp"
                 android:background="#FFFFFF"
+                android:labelFor="@id/li"
                 android:gravity="center"
                 android:inputType="number"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:importantForAutofill="no" />
         </TableRow>
 
 
@@ -161,9 +167,9 @@
                 android:layout_height="match_parent"
                 android:layout_column="0"
                 android:layout_margin="1dp"
+                android:layout_gravity="end"
                 android:background="#FFFFFF"
-                android:gravity="right"
-                android:text="Breadth"
+                android:text="@string/breadth"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
             <EditText
@@ -175,8 +181,10 @@
                 android:background="#FFFFFF"
                 android:gravity="center"
                 android:inputType="number"
+                android:labelFor="@id/bf"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:importantForAutofill="no" />
 
             <EditText
                 android:id="@+id/bi"
@@ -186,9 +194,11 @@
                 android:layout_margin="1dp"
                 android:background="#FFFFFF"
                 android:gravity="center"
+                android:labelFor="@id/bi"
                 android:inputType="number"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:importantForAutofill="no" />
         </TableRow>
 
 
@@ -200,7 +210,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
         android:onClick="reset"
-        android:text="Reset"
+        android:text="@string/reset"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
@@ -211,7 +221,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="calculate"
-        android:text="Calculate"
+        android:text="@string/calculate"
         app:layout_constraintBottom_toBottomOf="@+id/reset"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline"
@@ -227,7 +237,7 @@
         android:layout_marginEnd="20dp"
         android:background="#FFFFFF"
         android:gravity="center"
-        android:text="Volume"
+        android:text="@string/volume"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/volume_dis"
@@ -239,21 +249,21 @@
         android:id="@+id/rate_dis"
         android:layout_width="wrap_content"
         android:layout_height="39dp"
-        android:layout_marginTop="12dp"
-        android:gravity="right|center_vertical"
-        android:text="Rate(rupees/cu.ft)"
+        android:gravity="center_vertical|end"
+        android:text="@string/rate_rupees_cu_ft"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/rate"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tableLayout2" />
+        app:layout_constraintTop_toTopOf="@+id/rate" />
 
     <TextView
         android:id="@+id/volume_dis"
         android:layout_width="0dp"
         android:layout_height="42dp"
         android:layout_marginTop="36dp"
-        android:gravity="right|center_vertical"
-        android:text="Volume"
+        android:gravity="center_vertical|end"
+        android:text="@string/volume_text"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintHorizontal_bias="0.0"
@@ -264,8 +274,8 @@
         android:id="@+id/amount_dis"
         android:layout_width="0dp"
         android:layout_height="41dp"
-        android:gravity="right|center_vertical"
-        android:text="Amount"
+        android:gravity="center_vertical|end"
+        android:text="@string/amount_text"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="@+id/volume_dis"
         app:layout_constraintStart_toStartOf="parent"
@@ -280,7 +290,7 @@
         android:layout_marginStart="68dp"
         android:background="#FFFFFF"
         android:gravity="center"
-        android:text="Amount"
+        android:text="@string/amount"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/amount_dis"
@@ -303,21 +313,24 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.3" />
 
+    <!--Banner AdMob ID : ca-app-pub-6242171661439587/3984601958 -->
+    <!--Banner AdMob Mock ID : ca-app-pub-3940256099942544/6300978111 -->
+
     <EditText
         android:id="@+id/rate"
         android:layout_width="149dp"
-        android:layout_height="38dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         android:ems="10"
-        android:hint="Rate"
+        android:hint="@string/rate"
         android:inputType="numberDecimal"
         android:textAlignment="textEnd"
-        app:layout_constraintBottom_toBottomOf="@+id/rate_dis"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/rate_dis" />
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout2"
+        android:importantForAutofill="no" />
 
-    <!--Banner AdMob ID : ca-app-pub-6242171661439587/3984601958 -->
-    <!--Banner AdMob Mock ID : ca-app-pub-3940256099942544/6300978111 -->
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
         android:layout_width="wrap_content"
@@ -330,8 +343,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.439"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rate_dis"
-        app:layout_constraintVertical_bias="0.611"></com.google.android.gms.ads.AdView>
+        app:layout_constraintTop_toBottomOf="@+id/rate" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Volume Calculator</string>
+    <string name="feet">ft</string>
+    <string name="inches">in</string>
+    <string name="reset">Reset</string>
+    <string name="calculate">Calculate</string>
+    <string name="amount">Amount</string>
+    <string name="volume">Volume</string>
+    <string name="amount_text">Amount</string>
+    <string name="volume_text">Volume</string>
+    <string name="rate_rupees_cu_ft">Rate(rupees/cu.ft)</string>
+    <string name="breadth">Breadth</string>
+    <string name="height">Height</string>
+    <string name="length">Length</string>
+    <string name="rate">Rate</string>
 </resources>
