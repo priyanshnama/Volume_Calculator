@@ -11,12 +11,12 @@
         android:id="@+id/tableLayout2"
         android:layout_width="412dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
         android:stretchColumns="0,1,2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/night_mode">
 
         <TableRow
             android:layout_width="wrap_content"
@@ -74,8 +74,8 @@
                 android:layout_height="match_parent"
                 android:layout_column="0"
                 android:layout_margin="1dp"
-                android:layout_gravity="end"
                 android:background="#FFFFFF"
+                android:gravity="end"
                 android:text="@string/height"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -121,7 +121,7 @@
                 android:layout_column="0"
                 android:layout_margin="1dp"
                 android:background="#FFFFFF"
-                android:layout_gravity="end"
+                android:gravity="end"
                 android:text="@string/length"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -131,8 +131,8 @@
                 android:layout_height="wrap_content"
                 android:layout_column="1"
                 android:layout_margin="1dp"
-                android:background="#FFFFFF"
                 android:labelFor="@id/lf"
+                android:background="#FFFFFF"
                 android:gravity="center"
                 android:inputType="number"
                 android:textAppearance="?android:attr/textAppearanceLarge"
@@ -167,8 +167,8 @@
                 android:layout_height="match_parent"
                 android:layout_column="0"
                 android:layout_margin="1dp"
-                android:layout_gravity="end"
                 android:background="#FFFFFF"
+                android:gravity="end"
                 android:text="@string/breadth"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -179,9 +179,9 @@
                 android:layout_column="1"
                 android:layout_margin="1dp"
                 android:background="#FFFFFF"
+                android:labelFor="@id/bf"
                 android:gravity="center"
                 android:inputType="number"
-                android:labelFor="@id/bf"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textStyle="bold"
                 android:importantForAutofill="no" />
@@ -208,13 +208,13 @@
         android:id="@+id/reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="12dp"
         android:onClick="reset"
         android:text="@string/reset"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rate_dis" />
+        app:layout_constraintTop_toBottomOf="@+id/adView" />
 
     <Button
         android:id="@+id/calculate"
@@ -249,7 +249,7 @@
         android:id="@+id/rate_dis"
         android:layout_width="wrap_content"
         android:layout_height="39dp"
-        android:gravity="center_vertical|end"
+        android:gravity="center_horizontal|end"
         android:text="@string/rate_rupees_cu_ft"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toBottomOf="@+id/rate"
@@ -263,7 +263,7 @@
         android:layout_height="42dp"
         android:layout_marginTop="36dp"
         android:gravity="center_vertical|end"
-        android:text="@string/volume_text"
+        android:text="@string/volume"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintHorizontal_bias="0.0"
@@ -275,7 +275,7 @@
         android:layout_width="0dp"
         android:layout_height="41dp"
         android:gravity="center_vertical|end"
-        android:text="@string/amount_text"
+        android:text="@string/amount"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="@+id/volume_dis"
         app:layout_constraintStart_toStartOf="parent"
@@ -337,13 +337,24 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
         app:adSize="BANNER"
         app:adUnitId="ca-app-pub-6242171661439587/3984601958"
-        app:layout_constraintBottom_toTopOf="@+id/reset"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.439"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rate" />
+
+    <Switch
+        android:id="@+id/night_mode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/night_mode"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
