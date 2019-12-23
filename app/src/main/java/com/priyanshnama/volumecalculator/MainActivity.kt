@@ -93,6 +93,15 @@ class MainActivity : AppCompatActivity() {
                 val_hf = 0
             }
 
+            val val_rate :Double
+            val s_rate = rate.text.toString()
+            if(s_rate.matches("-?\\d+(\\.\\d+)?".toRegex())){
+                val_rate = s_rate.toDouble()
+            }
+            else{
+                val_rate = 0.00
+            }
+
             val h = 12 * (val_hf) + val_hi
             val l = 12 * (val_lf) + val_li
             val b = 12 * (val_bf) + val_bi
@@ -104,19 +113,11 @@ class MainActivity : AppCompatActivity() {
             val volume1 = BigDecimal(vol).setScale(6, RoundingMode.HALF_EVEN)
             volume.text = "$volume1 cu.ft"
 
-            val val_rate :Double
-            val s_rate = rate.text.toString()
-            if(s_hf.matches("-?\\d+(\\.\\d+)?".toRegex())){
-                val_rate = s_rate.toDouble()
-            }
-            else{
-                val_rate = 0.00
-            }
-
             val amt :Double
             amt = vol * val_rate
             val amount1 = BigDecimal(amt).setScale(2, RoundingMode.HALF_EVEN)
             amount.text = "$amount1 rupees"
+            println("$volume1 X $val_rate = $amount1")
         }
         catch(ex:Exception){
 

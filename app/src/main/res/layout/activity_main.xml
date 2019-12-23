@@ -10,7 +10,7 @@
 
         android:id="@+id/tableLayout2"
         android:layout_width="412dp"
-        android:layout_height="159dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:gravity="center"
         android:stretchColumns="0,1,2"
